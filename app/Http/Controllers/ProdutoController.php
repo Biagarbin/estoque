@@ -26,9 +26,7 @@ class ProdutoController extends Controller
 
       }
 
-      
-
-    public function update(Request $request, $id){
+        public function update(Request $request, $id){
         $produto = Produto::find($id);
         if(!$produto) {
         return response()->json('produto não econtrado');
