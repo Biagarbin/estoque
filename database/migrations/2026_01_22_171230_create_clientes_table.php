@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('clientes', function (Blueprint $table) {
          $table->id();
-         $table->string('name');
+         $table->string('nome');
+         $table->integer('idade');
     // Define o CPF como único no banco de dados
-        $table->string('cpf', 11)->unique(); 
+        $table->string('cpf')->unique(); 
         $table->timestamps();
         });
 

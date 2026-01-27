@@ -13,6 +13,6 @@ class Cliente extends Model
         'id',
         'nome',
         'idade',
-        'idade'
+        'cpf'
     ];
 }

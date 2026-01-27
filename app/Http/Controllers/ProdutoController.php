@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Produto;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class ProdutoController extends Controller
 {
@@ -25,7 +26,7 @@ class ProdutoController extends Controller
     return response()->json($produto);
 
       }
-
+      
         public function update(Request $request, $id){
         $produto = Produto::find($id);
         if(!$produto) {
