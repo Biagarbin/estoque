@@ -3,6 +3,8 @@
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\SaidaController;
+use App\Models\Saida;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +21,6 @@ Route::delete('/cliente/{id}',[ClienteController::class, 'delete']);
 Route::get('/entrada', [EntradaController::class, 'index']);
 Route::post('/entrada', [EntradaController::class, 'store']);
 Route::delete('/entrada/{id}',[EntradaController::class, 'delete']);
+
+Route::get('/saida', [SaidaController::class, 'index']);
+Route::post('/saida', [SaidaController::class, 'store']);
