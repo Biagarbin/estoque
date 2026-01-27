@@ -22,4 +22,14 @@ class SaidaController
     ]);
     return response()->json($saida);
     }
+
+    public function delete($id_produto)
+    {
+        $saida = Saida::find($id_produto);
+        if(!$saida){
+            return response ()->json(['houve saída do estoque']);
+        }
+        $saida->delete();
+        return response ()->json(['não houve saída do estoque']);
+    }
 }
