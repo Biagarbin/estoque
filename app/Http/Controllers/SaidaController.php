@@ -15,12 +15,15 @@ class SaidaController
 
     public function store(Request $request)
     {
+    
     $saida = Saida::create([
         'id_produto'=>$request->id_produto,
         'id_cliente'=>$request->id_cliente,
         'quantidade'=>$request->quantidade
+    
     ]);
     return response()->json($saida);
+
     }
 
     public function delete($id_produto)
@@ -30,6 +33,6 @@ class SaidaController
             return response ()->json(['houve saída do estoque']);
         }
         $saida->delete();
-        return response ()->json(['não houve saída do estoque']);
+        return response ()->json(['saia deletada']);
     }
 }

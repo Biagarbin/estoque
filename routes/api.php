@@ -24,3 +24,5 @@ Route::delete('/entrada/{id}',[EntradaController::class, 'delete']);
 
 Route::get('/saida', [SaidaController::class, 'index']);
 Route::post('/saida', [SaidaController::class, 'store']);
+Route::put('/saida/{id}', [SaidaController::class, 'update']);
+Route::delete('/saida/{id}',[SaidaController::class, 'delete']);
